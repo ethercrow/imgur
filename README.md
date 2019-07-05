@@ -1,5 +1,7 @@
 # imgur
 
+[![CircleCI](https://circleci.com/gh/ethercrow/imgur.svg?style=svg)](https://circleci.com/gh/ethercrow/imgur)
+
 A function to post an image to imgur
 
 ## How to use it
