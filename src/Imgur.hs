@@ -5,6 +5,7 @@ module Imgur
   )
 where
 
+import Control.Lens
 import qualified Data.Text as T
 import qualified Network.HTTP.Client.MultipartFormData as LM
 import Network.HTTP.Req
@@ -24,7 +25,7 @@ post imagePath = do
       body <- reqBodyMultipart [LM.partFileSource "image" imagePath]
       req POST endpoint body lbsResponse headers
   let document = parseLBS_ def $ responseBody resp
-  case document ^? root . el "data" ./ el "link" . text of
+  case document ^? root . el "data" ... el "link" . text of
     Just path -> pure path
     _ -> error ("Failed to parse imgur response " <> show document)
 
