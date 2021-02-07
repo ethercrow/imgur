@@ -28,7 +28,7 @@ library
     , data-default-class
     , http-client
     , lens
-    , req >=2.0
+    , req >=3.0
     , text
     , xml-conduit
     , xml-lens

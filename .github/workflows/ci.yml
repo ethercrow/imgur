@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
-        ghc: ['8.6', '8.8', '8.10']
+        ghc: ['8.6', '8.8', '8.10', '9.0.1']
         exclude:
         - os: windows-latest
           ghc: "8.8"
@@ -24,7 +24,7 @@ jobs:
       with:
         update: true
         install: zlib
-    - uses: actions/setup-haskell@v1.1.4
+    - uses: haskell/actions/setup@v1
       id: setup-haskell-cabal
       with:
         ghc-version: ${{ matrix.ghc }}
