@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
-        ghc: ['8.6', '8.8', '8.10', '9.0.1']
+        ghc: ['8.6', '8.8', '8.10', '9.0']
         exclude:
         - os: windows-latest
           ghc: "8.8"
