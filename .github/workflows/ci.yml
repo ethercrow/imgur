@@ -24,7 +24,7 @@ jobs:
       with:
         update: true
         install: zlib
-    - uses: haskell/actions/setup@v1
+    - uses: haskell/actions/setup@v1.2.1
       id: setup-haskell-cabal
       with:
         ghc-version: ${{ matrix.ghc }}
