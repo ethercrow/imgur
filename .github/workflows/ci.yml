@@ -33,7 +33,7 @@ jobs:
       run: |
         cabal update
         cabal freeze
-    - uses: actions/cache@v2.1.4
+    - uses: actions/cache@v3.3.0
       name: Cache cabal stuff
       with:
         path: |
